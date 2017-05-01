@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+         <h:form>
+            <p:fieldset legend="Endereco Destino">
+            <p:panelGrid columns="2"> 
+                <h:outputLabel value="Logradouro: " />
+                <p:inputText id="logradouro" requiredMessage="Campo 'Logradouro' é obrigatório !" value="#{enderecoBean.endereco.logradouro}" />
+                
+                <h:outputLabel value="Numero: " />
+                <p:inputText id="numero" requiredMessage="Campo 'Numero' é obrigatório !" value="#{enderecoBean.endereco.numero}" />
+                
+                <h:outputLabel value="Complemento: " />
+                <p:inputText id="complemento" requiredMessage="Campo 'Complemento' é obrigatório !" value="#{enderecoBean.endereco.complemento}" />
+                
+                <h:outputLabel value="Bairro: " />
+                <p:inputText id="bairro" requiredMessage="Campo 'Bairro' é obrigatório !" value="#{enderecoBean.endereco.bairro}" />
+                
+                <h:outputLabel value="Cidade: " />
+                <p:inputText id="cidade" requiredMessage="Campo 'Cidade' é obrigatório !" value="#{enderecoBean.endereco.cidade}" />
+                
+                <h:outputLabel value="Estado: " />
+                <p:inputText id="estado" requiredMessage="Campo 'Estado' é obrigatório !" value="#{enderecoBean.endereco.estado}" />
+                
+                <h:outputLabel value="CEP: " />
+                <p:inputText id="cep" requiredMessage="Campo 'CEP' é obrigatório !" value="#{enderecoBean.endereco.cep}" />
+            </p:panelGrid>
+       
+        
+        <p:toolbar>
+            <p:toolbarGroup align="left">
+                <p:commandButton value="Salvar" type="submit" action="#{enderecoBean.salvar()}" ajax="false" update="@form" />
+            </p:toolbarGroup>
+        </p:toolbar> 
+        </p:fieldset>
+    </h:body>
+</html>
+

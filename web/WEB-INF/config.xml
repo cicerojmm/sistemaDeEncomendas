@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<managed-bean>
+    <managed-bean-name>entregaBean</managed-bean-name>
+    <managed-bean-class>EntregaBean</managed-bean-class>
+    <managed-bean-scope>session</managed-bean-scope>
+ </managed-bean>

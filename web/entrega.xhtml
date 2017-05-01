@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3c.org/1999/xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
+    template="template.xhtml">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+
+    <h:form>
+        <p:fieldset legend="Solicitar Entrega">
+            <p:panelGrid columns="2"> 
+                <h:outputLabel value="Usuario: " />
+                <p:inputText id="nome" requiredMessage="Campo 'Usuario' é obrigatório !" value="#{usuarioBean.usuario.nome}" />
+            </p:panelGrid>
+        </p:fieldset>
+        
+         <p:fieldset legend="Encomenda">
+            <p:panelGrid columns="2"> 
+                <h:outputLabel value="Descricao: " />
+                <p:inputText id="descricao" requiredMessage="Campo 'Descricao' é obrigatório !" value="#{EntregaBean.encomenda.descricao}" />
+                
+                <h:outputLabel value="Tamanho: " />
+                <p:inputText id="tamanho" requiredMessage="Campo 'Descricao' é obrigatório !" value="#{EntregaBean.encomenda.tamanho}" />
+
+                <h:outputLabel value="Peso " />
+                <p:inputText id="peso" requiredMessage="Campo 'Peso' é obrigatório !" value="#{EntregaBean.encomenda.peso}" />
+            </p:panelGrid>
+        </p:fieldset>
+
+        <p:fieldset legend="Endereco Origem">
+            <p:panelGrid columns="2"> 
+                <h:outputLabel value="Logradouro: " />
+                <p:inputText id="logradouroO" requiredMessage="Campo 'Logradouro' é obrigatório !" value="#{EntregaBean.endOrigem.logradouro}" />
+                
+                <h:outputLabel value="Numero: " />
+                <p:inputText id="numeroO" requiredMessage="Campo 'Numero' é obrigatório !" value="#{EntregaBean.endOrigem.numero}" />
+                
+                <h:outputLabel value="Complemento: " />
+                <p:inputText id="complementoO" requiredMessage="Campo 'Complemento' é obrigatório !" value="#{EntregaBean.endOrigem.complemento}" />
+                
+                <h:outputLabel value="Bairro: " />
+                <p:inputText id="bairroO" requiredMessage="Campo 'Bairro' é obrigatório !" value="#{EntregaBean.endOrigem.bairro}" />
+                
+                <h:outputLabel value="Cidade: " />
+                <p:inputText id="cidadeO" requiredMessage="Campo 'Cidade' é obrigatório !" value="#{EntregaBean.endOrigem.cidade}" />
+                
+                <h:outputLabel value="Estado: " />
+                <p:inputText id="estadoO" requiredMessage="Campo 'Estado' é obrigatório !" value="#{EntregaBean.endOrigem.estado}" />
+                
+                <h:outputLabel value="CEP: " />
+                <p:inputText id="cepO" requiredMessage="Campo 'CEP' é obrigatório !" value="#{EntregaBean.endOrigem.cep}" />
+            </p:panelGrid>
+        </p:fieldset>
+        
+         <p:fieldset legend="Endereco Destino">
+            <p:panelGrid columns="2"> 
+                <h:outputLabel value="Logradouro: " />
+                <p:inputText id="logradouroD" requiredMessage="Campo 'Logradouro' é obrigatório !" value="#{EntregaBean.endDestino.logradouro}" />
+                
+                <h:outputLabel value="Numero: " />
+                <p:inputText id="numeroD" requiredMessage="Campo 'Numero' é obrigatório !" value="#{EntregaBean.endDestino.numero}" />
+                
+                <h:outputLabel value="Complemento: " />
+                <p:inputText id="complementoD" requiredMessage="Campo 'Complemento' é obrigatório !" value="#{EntregaBean.endDestino.complemento}" />
+                
+                <h:outputLabel value="Bairro: " />
+                <p:inputText id="bairroD" requiredMessage="Campo 'Bairro' é obrigatório !" value="#{EntregaBean.endDestino.bairro}" />
+                
+                <h:outputLabel value="Cidade: " />
+                <p:inputText id="cidadeD" requiredMessage="Campo 'Cidade' é obrigatório !" value="#{EntregaBean.endDestino.cidade}" />
+                
+                <h:outputLabel value="Estado: " />
+                <p:inputText id="estadoD" requiredMessage="Campo 'Estado' é obrigatório !" value="#{EntregaBean.endDestino.estado}" />
+                
+                <h:outputLabel value="CEP: " />
+                <p:inputText id="cepD" requiredMessage="Campo 'CEP' é obrigatório !" value="#{EntregaBean.endDestino.cep}" />
+            </p:panelGrid>
+        </p:fieldset>
+       <p:fieldset>
+        <p:toolbar>
+            <p:toolbarGroup align="left">
+                <p:commandButton value="salvar" type="submit" action="#{EntregaBean.inserirEntrega()}" update="@form" ajax="false"/>
+            </p:toolbarGroup>
+        </p:toolbar> 
+            <p:messages autoUpdate="true" showDetail="true" />
+        </p:fieldset>
+    </h:form>
+ </h:body>
+</html>
